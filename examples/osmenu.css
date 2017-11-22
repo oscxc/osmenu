@@ -1,0 +1,94 @@
+/* 菜单容器 */
+#osmenu{
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    cursor:pointer;
+    width: 270px;
+    height: 1200px;
+    font-family: Verdana,Tahoma,Consolas,'Microsoft Yahei';
+    margin-top: 50px;
+}
+/* 每个分类容器 */
+.menu-box{
+    margin-bottom: 4px;
+    overflow: hidden;
+}
+/* 标题及其子元素(可加hover效果) */
+.box-title{
+    position: relative;
+    height: 45px;
+    line-height: 45px;
+    background: #E5E5E5;
+}
+.box-title > svg:nth-child(1){
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left:10px;
+    top:10px;
+}
+.box-title > svg:nth-child(1) > path{
+    fill: #444;
+}
+.box-title > span {
+    position: relative;
+    left: 50px;
+    color: #444;
+}
+.box-title > svg:nth-child(3){
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right:16px;
+    top:10px;
+}
+.box-title > svg:nth-child(3) > path{
+    fill: #444;
+}
+/* item及其子元素(可加hover效果) */
+.box-item{
+    line-height: 45px;
+    /*background: rgba(255,255,255,0.16);*/
+    background: white;
+    opacity: 0.16;
+    border: 1px solid #bbb;
+}
+.box-item:hover{
+    opacity: 0.25;
+}
+.box-item > svg{
+
+}
+.box-item > span{
+    position: relative;
+    color: #222;
+    left: 30px;
+}
+.box-item:hover > span{
+    /*color: white;*/
+}
+/* 活动状态的标题及其子元素 */
+.title-active{
+
+}
+.title-active > svg:nth-child(1){
+
+}
+.title-active > span {
+
+}
+.title-active > svg:nth-child(3){
+
+}
+/* 活动状态的item及其子元素 */
+.item-active{
+    /*opacity: 0.4;*/
+}
+.item-active > svg{
+
+}
+.item-active > span{
+
+}

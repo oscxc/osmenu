@@ -1,0 +1,16 @@
+{
+  "name": "KMedia",
+  "version": "1.0.0",
+  "description": "JavaScript SDK for video play",
+  "main": "./dist/KMedia.js",
+  "scripts": {
+    "start": "webpack-dev-server --open"
+  },
+  "author": "keda team",
+  "homepage": "",
+  "dependencies": {
+    "osrange": "^1.3.0",
+    "webrtc-adapter": "^6.0.0"
+  },
+  "devDependencies": {}
+}
