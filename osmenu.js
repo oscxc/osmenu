@@ -145,7 +145,7 @@
         },
         // svg图标内容切换
         setSvgData:function (svg,data) {
-            svg.children[0].setAttribute('d',data);
+            svg.childNodes[0].setAttribute('d',data);
         },
         // 创建显示文字（每个 Title 或 Item 可能含有图标和文字）
         createText:function (text) {
