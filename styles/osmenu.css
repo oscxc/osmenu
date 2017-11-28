@@ -1,5 +1,5 @@
 /* 菜单容器 */
-#osmenu{
+.osmenu{
     user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
@@ -20,7 +20,8 @@
     position: relative;
     height: 45px;
     line-height: 45px;
-    background: #E5E5E5;
+    background: #354957;
+    border-bottom: 1px solid #aaa;
 }
 .box-title > svg:nth-child(1){
     position: absolute;
@@ -30,12 +31,12 @@
     top:10px;
 }
 .box-title > svg:nth-child(1) > path{
-    fill: #444;
+    fill: #fff;
 }
 .box-title > span {
     position: relative;
     left: 50px;
-    color: #444;
+    color: #fff;
 }
 .box-title > svg:nth-child(3){
     position: absolute;
@@ -45,26 +46,32 @@
     top:10px;
 }
 .box-title > svg:nth-child(3) > path{
-    fill: #444;
+    fill: #fff;
 }
 /* item及其子元素(可加hover效果) */
 .box-item{
+    position: relative;
     line-height: 45px;
-    /*background: rgba(255,255,255,0.16);*/
-    background: white;
-    opacity: 0.16;
-    border: 1px solid #bbb;
+    background: #8599a7;
+    border-bottom: 1px solid #aaa;
 }
 .box-item:hover{
-    opacity: 0.25;
+    background: #556977;
 }
 .box-item > svg{
-
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left:30px;
+    top:10px;
+}
+.box-item > svg > path{
+    fill:white;
 }
 .box-item > span{
     position: relative;
-    color: #222;
-    left: 30px;
+    color: #fff;
+    left: 60px;
 }
 .box-item:hover > span{
     /*color: white;*/
@@ -84,7 +91,7 @@
 }
 /* 活动状态的item及其子元素 */
 .item-active{
-    /*opacity: 0.4;*/
+    background: #556977;
 }
 .item-active > svg{
 

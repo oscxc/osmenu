@@ -167,8 +167,9 @@
     };
     extend(cfg,mycfg);
 
+    var open_close = cfg.data.open && cfg.data.close && cfg.data.open != '' && cfg.data.close != '';
     var el = create('div',{
-        id:'osmenu'
+        'class':'osmenu'
     });
 
     var boxList = [];
@@ -181,15 +182,24 @@
         box.open = true;
         //每个菜单创建title及其子元素
         box.tit = menucore.createTitle('box-title');
-        box.tit.icon = menucore.createSvgIcon({
-            data:data[i].title.svg
-        });
+        if(data[i].title.svg && data[i].title.svg !=''){
+            box.tit.icon = menucore.createSvgIcon({
+                data:data[i].title.svg
+            });
+            insert(box.tit,box.tit.icon);
+        }
+
         box.tit.text = menucore.createText(data[i].title.name);
-        box.tit.open_close = menucore.createSvgIcon({
-            data:cfg.data.open
-        });
+        insert(box.tit,box.tit.text);
+        if(open_close){
+            box.tit.open_close = menucore.createSvgIcon({
+                data:cfg.data.open
+            });
+            insert(box.tit,box.tit.open_close);
+        }
+
         //title添加到box
-        insert(el,insert(box,insert(box.tit,[box.tit.icon,box.tit.text,box.tit.open_close])));
+        insert(el,insert(box,box.tit));
 
         //遍历创建item及其子元素 并添加到box
         var items = data[i].items;
@@ -228,7 +238,9 @@
     }
     for(var i=0;i<boxList.length;i++){
         if(!boxList[i].open){
-            menucore.setSvgData(boxList[i].tit.open_close,cfg.data.close);
+            if(open_close){
+                menucore.setSvgData(boxList[i].tit.open_close,cfg.data.close);
+            }
             boxList[i].style.height = titleH + 'px';
         }
     }
@@ -285,11 +297,15 @@
             box.tit.addEventListener('click',function () {
                 var min = titleH,max = titleH + itemH * box.items.length;
                 if(box.open){
-                    menucore.setSvgData(this.open_close,cfg.data.close);
+                    if(open_close) {
+                        menucore.setSvgData(this.open_close,cfg.data.close);
+                    }
                     new H(box,max,min,cfg.changeTime);
                 }
                 else{
-                    menucore.setSvgData(this.open_close,cfg.data.open);
+                    if(open_close) {
+                        menucore.setSvgData(this.open_close,cfg.data.open);
+                    }
                     new H(box,min,max,cfg.changeTime);
                 }
                 box.open = !box.open;
