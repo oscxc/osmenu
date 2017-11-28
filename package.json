@@ -1,0 +1,23 @@
+{
+  "name": "osmenu",
+  "version": "1.0.0",
+  "description": "JavaScript 展开折叠菜单组件（仅支持二级）",
+  "main": "osmenu.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oscxc/osmenu.git"
+  },
+  "keywords": [
+    "menu",
+    "osmenu"
+  ],
+  "author": "七八个星天怪",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oscxc/osmenu/issues"
+  },
+  "homepage": "https://github.com/oscxc/osmenu#readme"
+}
