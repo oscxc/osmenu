@@ -50,6 +50,7 @@ var menu = require('osmenu');
 
 2、添加图标：[`examples/icon.html`](https://oscxc.github.io/osmenu/examples/icon.html)
 
+3、获取svg图标：[`Meterial Design`](https://materialdesignicons.com/)
 ## 配置项速查
 <table>
   <tr>
